@@ -40,16 +40,40 @@ body {
     background-color: aquamarine;
 }
 
-.container-home {
-    background-color: blueviolet;
+.container{
+    max-width: 1400px;
     margin: 200px 80px;
     text-align: center;
 
 }
+
 
 .headline {
     font-size: 40px;
     letter-spacing: -5px;
     line-height: 1;
     padding-bottom: 30px;
+}
+
+.button1{
+    padding: 10px 25px;
+    background-color: #1b1b1b;
+    text-decoration: none;
+    color: #ffffff;
+    margin-right: 10px;
+    border-radius:100px;
+}
+
+.button2{
+    padding: 10px 30px;
+    background-color: transparent;
+    text-decoration: none;
+    color: #000000;
+    margin-right: 10px;
+    border: solid 1px #3a3a3a;
+    border-radius:100px;
+}
+
+.button1:hover{
+    background-color: #3a3a3a;
 }
