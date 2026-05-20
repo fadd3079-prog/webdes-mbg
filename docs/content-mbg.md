@@ -35,12 +35,12 @@ MBG Insight menyajikan informasi Program Makan Bergizi Gratis secara ringkas, vi
 
 ### Tombol
 
-Jelajahi Program  
+Jelajahi Program
 Lihat Alur MBG
 
 ### Catatan
 
-Website ini merupakan media edukasi dan bukan kanal resmi pemerintah. Informasi yang ditampilkan dapat berubah dan perlu diverifikasi melalui sumber resmi terkait.
+Website ini merupakan media edukasi dan bukan kanal resmi pemerintah. Informasi yang ditampilkan dapat berubah dan perlu diverifikasi melalui sumber resmi terkait
 
 ---
 

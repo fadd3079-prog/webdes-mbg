@@ -1,27 +1,37 @@
+/* DEKSTOP ONLY */
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
-*,
-html {
+
+*,html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
 
+body {
+    background-color: #ffffff;
+}
+
 header {
-    background-color: #f9f9f9;
+    background-color: var(--light);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
-    position: fixed;
-    width: 100%;
 }
 
 header ul {
     list-style: none;
     display: flex;
-    padding: 10px;
+    gap: 40px;
 }
 
 header a {
@@ -30,80 +40,106 @@ header a {
     font-size: 14px;
 }
 
-header li {
-    margin: 0 20px;
-}
-
 header a:hover {
-    color: #8d8d8d;
+    color: var(--muted);
 }
 
-body {
-    background-color: #f1f1f1;
+h2{
+    font-size: 40px;
+    letter-spacing: -1.8px;
+    padding-bottom: 25px;
+}
+.tentang ul{
+    margin-left: 30px;
+}
+.tentang li{
+    list-style:georgian;;
 }
 
 .container {
-    max-width: 1400px;
-    margin: 0 80px;
+    width: min(100% - 64px, 1400px);
+    margin: 0 auto;
 }
 
 .home {
+    min-height: 100svh;
+    width: 100%;
+    padding-bottom: 40px;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("assets/prabowo1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    height: 100svh;
+    justify-content: center;
+    align-items: center;
 }
-.logohome{
+
+.logohome {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.logombg{
+
+.logombg {
     width: 25px;
-    padding-right: 5px;
+    margin-right: 5px;
 }
 
 .headline {
-    text-align: center;
-    /* border: solid black; */
-    font-size: 40px;
+    width: 100%;
+    font-size: 44px;
     letter-spacing: -5px;
-    line-height: 1;
-    padding-bottom: 50px;
-    padding-top: 20px;
+    line-height: 0.85;
+    text-align: center;
+    margin: 30px;
 }
 
+
+
+.button {
+    margin-top: 50px;
+}
 
 .button1,
 .button2 {
     padding: 10px 30px;
+    border-radius: 100px;
+    text-decoration: none;
 }
 
 .button1 {
-
-    background-color: #1b1b1b;
-    text-decoration: none;
-    color: #ffffff;
+    background-color: var(--light);
+    color: #000000;
     margin-right: 10px;
-    border-radius: 100px;
 }
 
 .button2 {
-
     background-color: transparent;
-    text-decoration: none;
-    color: #000000;
-    border: solid 1px #3a3a3a;
-    border-radius: 100px;
+    color: #ffffff;
+    border: 1px solid rgba(241, 241, 241, 0.555);
 }
 
 .button1:hover {
-    background-color: #3a3a3a;
-    padding: 10.5px 30.5px;
+    background-color: #f0f0f0;
 }
 
 .button2:hover {
-    color: #5a5a5a;
-    padding: 10.5px 30.5px;
+    color: #d3d3d3;
+}
+
+.disclaimer {
+    position: absolute;
+    bottom: 40px;
+    font-size: 12px;
+    opacity: 0.5;
+    border: solid rgba(255, 255, 255, 0.841) 0.5px;
+    padding: 5px 30px;
+}
+
+.tentang{
+    padding-top: 50px;
 }
