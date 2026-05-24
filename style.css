@@ -50,12 +50,6 @@ h2{
     letter-spacing: -1.8px;
     padding-bottom: 25px;
 }
-.tentang ul{
-    margin-left: 30px;
-}
-.tentang li{
-    list-style:georgian;;
-}
 
 .container {
     width: min(100% - 64px, 1400px);
@@ -141,38 +135,137 @@ h2{
     padding: 5px 30px;
 }
 
-.tentang{
-    padding-top: 50px;
+
+
+.tentang {
+    padding: 80px 0;
 }
 
+.tentang-content {
+    margin-bottom: 30px;
+}
+
+.tentang p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333333;
+}
+
+.tentang ul {
+    margin-top: 25px;
+    list-style: none;
+}
+
+.tentang li {
+    background-color: #fbfbfb;
+    border: 1px solid #cdcdcdd4;
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 15px;
+}
+
+.tentang li p {
+    margin-top: 6px;
+    color: #444444;
+}
+
+.sasaran {
+    padding: 80px 0;
+}
+
+.sasaran h2 {
+    margin-bottom: 10px;
+}
+
+.sasaran p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333333;
+    margin-bottom: 25px;
+}
+
+.sasaran table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background-color: #ffffff;
+}
+
+.sasaran td {
+    padding: 18px;
+    border: 1px solid #cdcdcdd4;
+    line-height: 1.6;
+    color: #333333;
+}
+
+.sasaran td:first-child {
+    width: 250px;
+    font-weight: 700;
+    color: #1b1b1b;
+    background-color: #fbfbfb;
+}
 
 .alur {
-    background-color: #64ffa0;
-    padding: 80px;
+    padding: 80px 0;
 }
 
-.card-alur h3 {
-    background-color: #ff0000;
+.alur h2 {
     margin-bottom: 30px;
-    padding-bottom: 50px;
 }
 
 .card-alur {
-    background-color: #7741ff;
     display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: stretch;
     flex-wrap: wrap;
-    gap: 20px;
-    text-align: center;
 }
+
 .card {
     background-color: #fbfbfb;
-    width: 300px;
-    height: 260px;
-    padding: 24px;
+    width: 220px;
+    min-height: 180px;
+    padding: 18px;
     border: 1px solid #cdcdcdd4;
     border-radius: 10px;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.064);
 }
-.card p{
-    background-color: #64ffa0;
+
+.card h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #1b1b1b;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #444444;
+}
+
+.sppg {
+    padding: 80px 0;
+}
+
+.sppg h2 {
+    margin-bottom: 20px;
+}
+
+.sppg p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333333;
+    margin-bottom: 30px;
+}
+
+.card-sppg {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-sppg .card {
+    width: 280px;
+    min-height: 170px;
 }
