@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MBG Insight</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
+    
+<header>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -17,17 +18,15 @@
                 <li><a href="#sppg">SPPG</a></li>
                 <li><a href="#manfaat">Manfaat</a></li>
                 <li><a href="#faq">FAQ</a></li>
-
             </ul>
         </nav>
-    </header>
-    </div>
+</header>
 
     <main>
         <section id="home" class="container home">
             <div class="logohome">
-                <img src="assets/logombg.png" alt="My Bini Gweh (MBG)" class="logombg" target="_blank">
-                <p>My Bini Gweh (MBG)</p>
+                <img src="image/logombg.png" alt="My Bini Gweh (MBG)" class="logombg">
+                <h1 id="efek-ngetik"></h1>
             </div>
             <div class="headline">
                 <h1>Gizi Hari Ini,<br>Generasi Kuat Esok Hari</h1>
@@ -56,37 +55,275 @@
                 <ul>
                     <li><b>Pemenuhan Gizi</b></li>
                     <p>Mendukung asupan makanan bergizi bagi kelompok sasaran prioritas.</p>
-                    <li>Dukungan Pendidikan</li>
+                    <li><b>Dukungan Pendidikan</b></li>
                     <p>Gizi yang baik membantu anak lebih siap mengikuti proses belajar.</p>
-                    <li>Investasi SDM</li>
+                    <li><b>Investasi SDM</b></li>
                     <p>Generasi yang sehat menjadi salah satu fondasi penting bagi pembangunan Indonesia.</p>
                 </ul>
             </div>
         </section>
 
-        <selection id="sasaran" >
-            <div>
-                <h2>Sasaran Penerima Manfaat</h2>
+        <section id="angka" class="container angka">
+            <div class="angka-content">
+                <h2>Angka Informatif</h2>
+                <p>Angka di bawah bersifat informatif dan perlu diverifikasi kembali melalui sumber resmi terbaru.</p>
             </div>
-        </selection>
-
-        <section id="insight" class="container-insight">
-            <div class="insight-content">
-                <h2>Insight MBG</h2>
-                <p>MBG Insight menyediakan berbagai informasi dan wawasan terkait makanan bergizi, termasuk tips
-                    nutrisi, resep sehat, dan panduan untuk memenuhi kebutuhan gizi harian. Kami berusaha untuk
-                    memberikan informasi yang akurat dan bermanfaat bagi masyarakat.</p>
+            <div class="angka-grid">
+                <div class="angka-item">
+                    <div class="angka-number">38</div>
+                    <h3>Provinsi</h3>
+                    <p>Cakupan program secara nasional</p>
+                </div>
+                <div class="angka-item">
+                    <div class="angka-number">82,9 Juta</div>
+                    <h3>Target Penerima</h3>
+                    <p>Target penerima manfaat MBG</p>
+                </div>
+                <div class="angka-item">
+                    <div class="angka-number">21 Miliar</div>
+                    <h3>Proyeksi Porsi</h3>
+                    <p>Proyeksi porsi MBG pada tahun 2026</p>
+                </div>
+                <div class="angka-item">
+                    <div class="angka-number">SPPG</div>
+                    <h3>Satuan Layanan</h3>
+                    <p>Satuan layanan dalam ekosistem pemenuhan gizi</p>
+                </div>
             </div>
-
         </section>
-        <selection>
-            <div>
-                <h2></h2>
+
+        <section id="sasaran" class="container sasaran">
+            <div class="sasaran-content">
+                <h2>Sasaran Penerima Manfaat</h2>
+                <p>Program MBG diarahkan untuk mendukung kelompok sasaran yang membutuhkan pemenuhan gizi, terutama pada fase penting pertumbuhan, pendidikan, dan kesehatan keluarga.</p>
             </div>
-        </selection>
+            <div class="sasaran-grid">
+                <div class="sasaran-item">
+                    <h3>👨‍🎓 Peserta Didik</h3>
+                    <p>Siswa SD, SMP, SMA, atau sederajat yang membutuhkan dukungan gizi untuk menunjang aktivitas belajar.</p>
+                </div>
+                <div class="sasaran-item">
+                    <h3>🕌 Santri</h3>
+                    <p>Peserta didik di lingkungan pesantren yang membutuhkan dukungan gizi dalam kegiatan pendidikan keagamaan.</p>
+                </div>
+                <div class="sasaran-item">
+                    <h3>👶 Anak Usia Dini dan Balita</h3>
+                    <p>Kelompok usia awal yang berada pada masa penting tumbuh kembang.</p>
+                </div>
+                <div class="sasaran-item">
+                    <h3>🤱 Ibu Hamil</h3>
+                    <p>Mendukung kebutuhan gizi ibu dan janin selama masa kehamilan.</p>
+                </div>
+                <div class="sasaran-item">
+                    <h3>👩‍🍼 Ibu Menyusui</h3>
+                    <p>Mendukung kebutuhan nutrisi ibu dan bayi pada fase awal kehidupan anak.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="alur" class="container alur">
+            <div class="alur-content">
+                <h2>Bagaimana Program MBG Berjalan?</h2>
+                <p>Program gizi berskala nasional membutuhkan alur yang terencana, mulai dari pendataan sasaran, perencanaan menu, pengelolaan dapur layanan, distribusi, hingga pemantauan kualitas.</p>
+            </div>
+            <div class="alur-steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h3>Identifikasi Sasaran</h3>
+                    <p>Menentukan kelompok penerima manfaat berdasarkan data yang relevan.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h3>Perencanaan Menu</h3>
+                    <p>Menyusun menu berdasarkan kebutuhan gizi, ketersediaan bahan, dan standar layanan.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h3>Pengadaan Bahan Pangan</h3>
+                    <p>Menyiapkan bahan pangan yang layak, aman, dan sesuai standar kualitas.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">04</div>
+                    <h3>Pengolahan di SPPG</h3>
+                    <p>Makanan dikelola melalui satuan layanan yang bertanggung jawab terhadap proses pengolahan.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">05</div>
+                    <h3>Distribusi</h3>
+                    <p>Makanan didistribusikan kepada kelompok sasaran sesuai jadwal dan mekanisme layanan.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">06</div>
+                    <h3>Edukasi dan Pemantauan</h3>
+                    <p>Pelaksanaan program perlu disertai edukasi gizi, evaluasi, dan perbaikan berkelanjutan.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sppg" class="container sppg">
+            <div class="sppg-content">
+                <h2>SPPG sebagai Titik Layanan Pemenuhan Gizi</h2>
+                <p>SPPG atau Satuan Pelayanan Pemenuhan Gizi adalah titik layanan yang membantu menyiapkan dan menyalurkan makanan bergizi kepada penerima manfaat.</p>
+            </div>
+            <div class="sppg-grid">
+                <div class="sppg-item">
+                    <h3>🥬 Bahan Pangan</h3>
+                    <p>Bahan pangan disiapkan sesuai kebutuhan layanan dan standar kualitas.</p>
+                </div>
+                <div class="sppg-item">
+                    <h3>👨‍🍳 Pengolahan</h3>
+                    <p>Proses pengolahan makanan perlu menjaga kebersihan, keamanan, dan kualitas.</p>
+                </div>
+                <div class="sppg-item">
+                    <h3>🚚 Distribusi</h3>
+                    <p>Makanan disalurkan kepada penerima manfaat sesuai jadwal dan mekanisme yang ditentukan.</p>
+                </div>
+                <div class="sppg-item">
+                    <h3>👀 Pengawasan</h3>
+                    <p>Pelaksanaan layanan perlu dipantau agar dapat dievaluasi dan diperbaiki secara berkala.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="manfaat" class="container manfaat">
+            <div class="manfaat-content">
+                <h2>Lebih dari Sekadar Makan Gratis</h2>
+                <p>MBG tidak hanya berkaitan dengan makanan, tetapi juga dengan kesehatan, pendidikan, keluarga, dan ekonomi lokal.</p>
+            </div>
+            <div class="manfaat-grid">
+                <div class="manfaat-item">
+                    <h3>❤️ Kesehatan Anak</h3>
+                    <p>Asupan bergizi membantu mendukung pertumbuhan dan kondisi kesehatan anak.</p>
+                </div>
+                <div class="manfaat-item">
+                    <h3>🧠 Konsentrasi Belajar</h3>
+                    <p>Anak yang mendapat asupan baik lebih siap mengikuti kegiatan belajar.</p>
+                </div>
+                <div class="manfaat-item">
+                    <h3>👨‍👩‍👧‍👦 Dukungan Keluarga</h3>
+                    <p>Program gizi dapat membantu meringankan sebagian kebutuhan harian keluarga.</p>
+                </div>
+                <div class="manfaat-item">
+                    <h3>🛡️ Pencegahan Masalah Gizi</h3>
+                    <p>Intervensi gizi dapat mendukung upaya penurunan masalah gizi.</p>
+                </div>
+                <div class="manfaat-item">
+                    <h3>💰 Ekonomi Lokal</h3>
+                    <p>Kebutuhan bahan pangan dan layanan dapur dapat membuka ruang keterlibatan pelaku lokal.</p>
+                </div>
+                <div class="manfaat-item">
+                    <h3>🏗️ Investasi SDM</h3>
+                    <p>Kesehatan generasi muda menjadi bagian penting dari pembangunan nasional.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="container faq">
+            <div class="faq-content">
+                <h2>Pertanyaan Umum</h2>
+                <p>Beberapa pertanyaan yang sering ditanyakan tentang Program MBG</p>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary><h3>Apa itu MBG?</h3></summary>
+                    <p>MBG atau Makan Bergizi Gratis adalah program pemenuhan gizi nasional yang ditujukan untuk mendukung kesehatan, pendidikan, dan kualitas sumber daya manusia.</p>
+                </details>
+                <details class="faq-item">
+                    <summary><h3>Siapa sasaran penerima manfaat MBG?</h3></summary>
+                    <p>Sasaran MBG mencakup peserta didik, santri, anak usia dini, balita, ibu hamil, dan ibu menyusui sesuai kebijakan dan data sasaran yang berlaku.</p>
+                </details>
+                <details class="faq-item">
+                    <summary><h3>Apa itu SPPG?</h3></summary>
+                    <p>SPPG adalah Satuan Pelayanan Pemenuhan Gizi yang berperan dalam proses penyediaan, pengolahan, distribusi, dan evaluasi makanan bergizi.</p>
+                </details>
+                <details class="faq-item">
+                    <summary><h3>Apakah website ini website resmi pemerintah?</h3></summary>
+                    <p>Tidak. Website ini dibuat sebagai media edukatif dan proyek frontend native HTML dan CSS. Informasi resmi tetap perlu dilihat melalui kanal pemerintah terkait.</p>
+                </details>
+                <details class="faq-item">
+                    <summary><h3>Mengapa gizi penting untuk pendidikan?</h3></summary>
+                    <p>Gizi yang baik membantu anak lebih siap belajar, lebih fokus, dan memiliki kondisi tubuh yang lebih mendukung untuk mengikuti aktivitas sekolah.</p>
+                </details>
+            </div>
+        </section>
+
+        <section id="gizi" class="container gizi">
+            <div class="gizi-content">
+                <h2>Belajar Gizi dengan Cara Sederhana</h2>
+                <p>Makanan bergizi tidak hanya soal kenyang, tetapi juga keseimbangan nutrisi. Bagian ini membantu memahami komponen dasar makanan bergizi secara sederhana.</p>
+            </div>
+            <div class="gizi-grid">
+                <div class="gizi-item">
+                    <h3>🍚 Karbohidrat</h3>
+                    <p>Sumber energi utama untuk aktivitas belajar dan kegiatan harian. Contoh: nasi, jagung, kentang, ubi.</p>
+                </div>
+                <div class="gizi-item">
+                    <h3>🥩 Protein</h3>
+                    <p>Membantu pertumbuhan dan menjaga daya tahan tubuh. Contoh: telur, ikan, ayam, tempe, tahu.</p>
+                </div>
+                <div class="gizi-item">
+                    <h3>🥬 Sayur</h3>
+                    <p>Mengandung vitamin, mineral, dan serat untuk kesehatan tubuh. Contoh: bayam, wortel, kangkung, sawi.</p>
+                </div>
+                <div class="gizi-item">
+                    <h3>🍎 Buah</h3>
+                    <p>Sumber vitamin, mineral, dan serat alami. Contoh: pisang, pepaya, jeruk, semangka.</p>
+                </div>
+                <div class="gizi-item">
+                    <h3>💧 Air Mineral</h3>
+                    <p>Menjaga cairan tubuh agar tetap seimbang untuk aktivitas dan konsentrasi optimal.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="container cta">
+            <div class="cta-content">
+                <h2>Pahami Programnya, Lihat Dampaknya</h2>
+                <p>Program gizi bukan hanya tentang makanan, tetapi juga tentang kesehatan, pendidikan, keluarga, dan masa depan generasi Indonesia.</p>
+                <div class="cta-buttons">
+                    <a href="#home" class="button1">Kembali ke Atas</a>
+                    <a href="#faq" class="button2">Baca FAQ</a>
+                </div>
+            </div>
+        </section>
     </main>
-    <script src="index.js"></script>
+
+<footer>
+    <div class="container footer-content">
+        <div class="footer-info">
+            <div class="footer-logo">
+                <img src="image/logombg.png" alt="MBG Logo" class="footer-logo-img">
+                <h3>MBG Insight</h3>
+            </div>
+            <p>Website informasi edukatif tentang Program Makan Bergizi Gratis. Dibuat sebagai proyek frontend native HTML, CSS, dan JavaScript.</p>
+        </div>
+        
+        <div class="footer-nav">
+            <h4>Navigasi</h4>
+            <ul>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#sasaran">Sasaran</a></li>
+                <li><a href="#alur">Alur</a></li>
+                <li><a href="#sppg">SPPG</a></li>
+                <li><a href="#manfaat">Manfaat</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-disclaimer">
+            <h4>Disclaimer</h4>
+            <p>MBG Insight bukan website resmi pemerintah. Website ini dibuat sebagai media informasi dan edukasi berbasis proyek frontend. Informasi yang ditampilkan perlu diverifikasi kembali melalui kanal resmi pemerintah terkait.</p>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <div class="container">
+            <p>&copy; 2026 MBG Insight. Proyek edukatif frontend native.</p>
+        </div>
+    </div>
+</footer>
+    <script src="script.js"></script>
 
 </body>
-
 </html>
