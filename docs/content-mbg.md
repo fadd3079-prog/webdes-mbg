@@ -124,7 +124,7 @@ Mendukung kebutuhan gizi ibu dan janin selama masa kehamilan.
 
 ### Ibu Menyusui
 
-Mendukung kebutuhan nutrisi ibu dan bayi pada fase awal kehidupan anak.
+Mendukung kebutuhan nutrisi ibu dan bayi pada fase awal kehidupan anak
 
 ---
 
