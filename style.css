@@ -12,12 +12,13 @@
 }
 
 body {
-    background-color: #ffffff;
+    background-color: #f7f8f5;
+    color: #1b1b1b;
 }
 
 header {
     background-color: #ffffff;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
     height: 60px;
     width: 100%;
     position: fixed;
@@ -42,7 +43,7 @@ header a {
 }
 
 header a:hover {
-    color: #505050;
+    color: #2f6b3f;
 }
 
 h2{
@@ -107,19 +108,19 @@ h2{
 }
 
 .button1 {
-    background-color:#f0f0f0;
-    color: #000000;
+    background-color:#2f6b3f;
+    color: #ffffff;
     margin-right: 10px;
 }
 
 .button2 {
     background-color: transparent;
     color: #ffffff;
-    border: 1px solid rgba(241, 241, 241, 0.555);
+    border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 .button1:hover {
-    background-color: #f0f0f0;
+    background-color: #255733;
 }
 
 .button2:hover {
@@ -131,14 +132,16 @@ h2{
     bottom: 40px;
     font-size: 12px;
     opacity: 0.5;
-    border: solid rgba(255, 255, 255, 0.841) 0.5px;
+    border: solid rgba(255, 255, 255, 0.7) 0.5px;
     padding: 5px 30px;
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 
 
 .tentang {
     padding: 80px 0;
+    background-color: #ffffff;
 }
 
 .tentang-content {
@@ -157,11 +160,15 @@ h2{
 }
 
 .tentang li {
-    background-color: #fbfbfb;
-    border: 1px solid #cdcdcdd4;
+    background-color: #f7faf4;
+    border: 1px solid #d7dfd0;
     border-radius: 10px;
     padding: 18px;
     margin-bottom: 15px;
+}
+
+.tentang li b {
+    color: #2f6b3f;
 }
 
 .tentang li p {
@@ -171,6 +178,7 @@ h2{
 
 .sasaran {
     padding: 80px 0;
+    background-color: #f1f4ee;
 }
 
 .sasaran h2 {
@@ -189,11 +197,12 @@ h2{
     border-collapse: collapse;
     margin-top: 25px;
     background-color: #ffffff;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
 }
 
 .sasaran td {
     padding: 18px;
-    border: 1px solid #cdcdcdd4;
+    border: 1px solid #d8d8d8;
     line-height: 1.6;
     color: #333333;
 }
@@ -202,11 +211,12 @@ h2{
     width: 250px;
     font-weight: 700;
     color: #1b1b1b;
-    background-color: #fbfbfb;
+    background-color: #eef6e9;
 }
 
 .alur {
     padding: 80px 0;
+    background-color: #ffffff;
 }
 
 .alur h2 {
@@ -215,26 +225,27 @@ h2{
 
 .card-alur {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
 }
 
 .card {
-    background-color: #fbfbfb;
-    width: 220px;
-    min-height: 180px;
-    padding: 18px;
-    border: 1px solid #cdcdcdd4;
+    background-color: #ffffff;
+    width: 280px;
+    min-height: 170px;
+    padding: 20px;
+    border: 1px solid #d8d8d8;
     border-radius: 10px;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.064);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
 .card h3 {
     font-size: 16px;
     margin-bottom: 12px;
-    color: #1b1b1b;
+    line-height: 1.4;
+    color: #173b22;
 }
 
 .card p {
@@ -243,8 +254,14 @@ h2{
     color: #444444;
 }
 
+.card-alur .card {
+    width: 380px;
+    min-height: 150px;
+}
+
 .sppg {
     padding: 80px 0;
+    background-color: #f7f8f5;
 }
 
 .sppg h2 {
@@ -266,6 +283,270 @@ h2{
 }
 
 .card-sppg .card {
-    width: 280px;
-    min-height: 170px;
+    width: 300px;
+    min-height: 160px;
+}
+
+.manfaat {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.manfaat h2 {
+    margin-bottom: 20px;
+}
+
+.manfaat p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333333;
+    margin-bottom: 30px;
+}
+
+.card-manfaat {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-manfaat .card {
+    width: 380px;
+    min-height: 150px;
+}
+
+.dokumentasi {
+    padding: 80px 0;
+    background-color: #f1f4ee;
+}
+
+.dokumentasi h2 {
+    margin-bottom: 20px;
+}
+
+.dokumentasi p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333333;
+    margin-bottom: 30px;
+}
+
+.card-dokumentasi {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-dokumentasi .card {
+    width: 240px;
+    min-height: 330px;
+}
+
+.card-dokumentasi img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #d8d8d8;
+}
+
+.gizi {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.gizi h2 {
+    margin-bottom: 20px;
+}
+
+.gizi p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333333;
+    margin-bottom: 30px;
+}
+
+.card-gizi {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-gizi .card {
+    width: 240px;
+    min-height: 230px;
+}
+
+.tata-kelola {
+    padding: 80px 0;
+    background-color: #f7f8f5;
+}
+
+.tata-kelola h2 {
+    margin-bottom: 20px;
+}
+
+.tata-kelola p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333333;
+    margin-bottom: 30px;
+}
+
+.card-tata-kelola {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-tata-kelola .card {
+    width: 360px;
+    min-height: 150px;
+}
+
+.faq {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.faq h2 {
+    margin-bottom: 20px;
+}
+
+.faq p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333333;
+    margin-bottom: 30px;
+}
+
+.card-faq {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-faq .card {
+    width: 520px;
+    min-height: 80px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-faq h3 {
+    cursor: pointer;
+    color: #173b22;
+}
+
+.jawaban-faq {
+    display: none;
+    margin-top: 12px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #444444;
+    margin-bottom: 0;
+}
+
+.footer {
+    background-color: #142017;
+    color: #ffffff;
+    padding: 40px 0 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.footer-kiri {
+    width: 450px;
+}
+
+.footer h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #d6d6d6;
+}
+
+.footer-menu {
+    width: 100%;
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-top: 25px;
+}
+
+.footer-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-menu a:hover {
+    color: #d9c56f;
+}
+
+.footer-tombol {
+    margin-top: 25px;
+}
+
+.tombol-js {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: 1px solid #d9c56f;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.tombol-js:hover {
+    background-color: #d9c56f;
+    color: #142017;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 18px;
+    border-top: 1px solid #415347;
+}
+
+
+.tentang,
+.alur,
+.manfaat,
+.gizi,
+.faq {
+    background-color: #ffffff;
+}
+
+.sasaran,
+.sppg,
+.dokumentasi,
+.tata-kelola {
+    background-color: #f7faf6;
 }
