@@ -36,6 +36,24 @@ header ul {
     gap: 40px;
 }
 
+header nav {
+    width: min(100% - 64px, 1400px);
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header li:last-child {
+    position: absolute;
+    right: 0;
+    top: 12px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+}
+
 header a {
     text-decoration: none;
     color: #1b1b1b;
@@ -44,6 +62,41 @@ header a {
 
 header a:hover {
     color: #2f6b3f;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo img {
+    width: 20px;
+    object-fit: contain;
+}
+
+.nav-github {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #173b22;
+    color: #ffffff;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border-radius: 50px;
+    border: 1px solid #173b22;
+}
+
+.nav-github:hover {
+    background-color: #d9c56f;
+    color: #173b22;
+    border-color: #d9c56f;
+}
+
+.nav-github-icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
 }
 
 h2{
@@ -62,7 +115,7 @@ h2{
     width: 100%;
     padding-bottom: 40px;
     position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("assets/prabowo1.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("assets/prabowo.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -167,6 +220,11 @@ h2{
     margin-bottom: 15px;
 }
 
+.tentang li:hover {
+    background-color: #eef6e9;
+    border-color: #b9cdb2;
+}
+
 .tentang li b {
     color: #2f6b3f;
 }
@@ -214,6 +272,10 @@ h2{
     background-color: #eef6e9;
 }
 
+.sasaran tr:hover {
+    background-color: #f7faf4;
+}
+
 .alur {
     padding: 80px 0;
     background-color: #ffffff;
@@ -241,6 +303,12 @@ h2{
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
+.card:hover {
+    background-color: #f7faf4;
+    border-color: #b9cdb2;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
 .card h3 {
     font-size: 16px;
     margin-bottom: 12px;
@@ -254,9 +322,19 @@ h2{
     color: #444444;
 }
 
+.card-alur img,
+.card-sppg img,
+.card-manfaat img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
 .card-alur .card {
     width: 380px;
-    min-height: 150px;
+    min-height: 300px;
 }
 
 .sppg {
@@ -284,7 +362,7 @@ h2{
 
 .card-sppg .card {
     width: 300px;
-    min-height: 160px;
+    min-height: 300px;
 }
 
 .manfaat {
@@ -312,7 +390,7 @@ h2{
 
 .card-manfaat .card {
     width: 380px;
-    min-height: 150px;
+    min-height: 300px;
 }
 
 .dokumentasi {
@@ -340,7 +418,8 @@ h2{
 
 .card-dokumentasi .card {
     width: 240px;
-    min-height: 330px;
+    min-height: 0;
+    padding: 10px;
 }
 
 .card-dokumentasi img {
@@ -348,7 +427,7 @@ h2{
     height: 170px;
     object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 15px;
+    margin-bottom: 0;
     border: 1px solid #d8d8d8;
 }
 
@@ -378,6 +457,57 @@ h2{
 .card-gizi .card {
     width: 240px;
     min-height: 230px;
+}
+
+.standar-gizi {
+    padding: 80px 0;
+    background-color: #f7faf6;
+}
+
+.standar-gizi p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.catatan-standar {
+    background-color: #ffffff;
+    border: 1px solid #d7dfd0;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.standar-gizi h3 {
+    font-size: 22px;
+    color: #173b22;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.tabel-standar,
+.tabel-porsi {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.tabel-standar th,
+.tabel-standar td,
+.tabel-porsi th,
+.tabel-porsi td {
+    padding: 14px;
+    border: 1px solid #d8d8d8;
+    line-height: 1.5;
+    color: #333333;
+    text-align: left;
+}
+
+.tabel-standar th,
+.tabel-porsi th {
+    background-color: #2f6b3f;
+    color: #ffffff;
 }
 
 .tata-kelola {
@@ -447,6 +577,10 @@ h2{
     color: #173b22;
 }
 
+.card-faq h3:hover {
+    color: #2f6b3f;
+}
+
 .jawaban-faq {
     display: none;
     margin-top: 12px;
@@ -509,6 +643,26 @@ h2{
     color: #d9c56f;
 }
 
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.github-link:hover {
+    color: #d9c56f;
+}
+
+.github-icon {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+}
+
 .footer-tombol {
     margin-top: 25px;
 }
@@ -547,6 +701,7 @@ h2{
 .sasaran,
 .sppg,
 .dokumentasi,
+.standar-gizi,
 .tata-kelola {
     background-color: #f7faf6;
 }
