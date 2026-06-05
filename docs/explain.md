@@ -1,88 +1,78 @@
-#Website MBG Insight
+# Website MBG Insight
+
+Dokumen ini menjelaskan isi project MBG Insight dengan bahasa sederhana.
+Project ini dibuat menggunakan HTML, CSS, dan JavaScript native.
 
 ## 1. Gambaran Umum Project
 
-Project ini adalah website edukatif bernama **MBG Insight**. Website ini membahas informasi dasar tentang Program Makan Bergizi Gratis, mulai dari pengertian program, sasaran penerima manfaat, alur pelaksanaan, peran SPPG, manfaat, dokumentasi, edukasi gizi, tata kelola, sampai pertanyaan umum.
+MBG Insight adalah website edukatif tentang Program Makan Bergizi Gratis.
+Website ini membahas pengertian MBG, sasaran penerima manfaat, alur program, SPPG, manfaat, dokumentasi, edukasi gizi, standar gizi, tata kelola, dan FAQ.
 
-Website ini dibuat menggunakan tiga teknologi dasar frontend, yaitu **HTML**, **CSS**, dan **JavaScript native**. HTML dipakai untuk menyusun struktur halaman, CSS dipakai untuk mengatur tampilan dan warna, sedangkan JavaScript dipakai untuk memberi interaksi sederhana seperti tombol alert, kembali ke atas, dan membuka jawaban FAQ.
-
-Secara konsep, website ini masih termasuk project basic. Struktur kodenya belum memakai framework seperti Bootstrap atau Tailwind. Semua bagian dibuat langsung menggunakan tag HTML, class CSS, dan function JavaScript sederhana.
+Project ini masih termasuk website basic.
+Tidak ada framework seperti Bootstrap, Tailwind, React, atau library JavaScript tambahan.
 
 ## 2. Struktur File Project
 
-Project ini memiliki beberapa file dan folder utama:
+File utama:
 
 - `index.html`
-
-  File ini adalah halaman utama website. Di dalamnya terdapat struktur lengkap website, mulai dari header, navbar, section home, section informasi MBG, FAQ, sampai footer.
+  Berisi struktur halaman website.
 
 - `style.css`
-
-  File ini digunakan untuk mengatur tampilan website. Semua warna, ukuran, jarak, card, background section, tombol, header, footer, dan layout sederhana diatur di file ini.
+  Berisi semua style, warna, layout, card, gambar, header, footer, dan tombol.
 
 - `script.js`
-
-  File ini berisi JavaScript sederhana. Fungsinya untuk memastikan JavaScript aktif, menampilkan pesan alert, mengembalikan halaman ke atas, dan membuka atau menutup jawaban FAQ.
+  Berisi JavaScript sederhana untuk alert, tombol kembali ke atas, dan FAQ.
 
 - `assets`
-
-  Folder ini menyimpan file gambar yang dipakai di website, seperti logo MBG dan gambar dokumentasi. Contohnya `logombg.png` dan `prabowo1.jpg`.
+  Berisi gambar dan logo yang dipakai website.
 
 - `docs`
+  Berisi dokumentasi project dalam format Markdown.
 
-  Folder ini digunakan untuk menyimpan dokumentasi project. File `explain.md` ini juga berada di folder `docs`.
+## 3. Asset Gambar
 
-## 3. Penjelasan index.html
+Folder `assets` berisi gambar yang sudah dipakai di website.
 
-File `index.html` adalah pusat dari struktur website. Semua konten yang tampil di browser ditulis di file ini.
+Daftar gambar:
 
-### Deklarasi HTML
+- `logombg.png`
+- `dapur.webp`
+- `dapur1.webp`
+- `dapur2.webp`
+- `distribusi.webp`
+- `mbg.webp`
+- `mobilmbg.webp`
+- `mobilmbg1.webp`
+- `prabowo.webp`
+- `prabowo1.jpg`
+- `prabowo2.webp`
+- `sppg.webp`
 
-Pada bagian paling atas terdapat kode:
+Nama file lama dengan awalan `compressO-` sudah direname agar lebih rapi dan aman dipakai di HTML.
 
-```html
-<!DOCTYPE html>
-```
+## 4. Penjelasan index.html
 
-Kode ini memberi tahu browser bahwa file yang dibuka menggunakan standar HTML modern. Dengan adanya deklarasi ini, browser dapat membaca struktur halaman dengan lebih benar.
-
-Setelah itu ada tag:
-
-```html
-<html>
-```
-
-Tag ini menjadi pembungkus utama seluruh isi halaman HTML.
+File `index.html` adalah file utama yang dibuka browser.
 
 ### Bagian head
 
-Di dalam tag `<head>`, terdapat beberapa informasi penting untuk halaman.
+Bagian `<head>` berisi charset, title, favicon, dan link CSS.
+
+Contoh:
 
 ```html
 <meta charset="UTF-8">
-```
-
-Tag ini digunakan agar karakter khusus seperti simbol copyright dan simbol panah pada FAQ dapat terbaca dengan baik oleh browser.
-
-```html
 <title>MBG Insight</title>
-```
-
-Bagian ini menentukan judul halaman yang muncul di tab browser.
-
-```html
+<link rel="icon" href="assets/logombg.png">
 <link rel="stylesheet" href="style.css" />
 ```
 
-Kode ini menghubungkan file HTML dengan file CSS. Jadi, semua class yang ditulis di HTML dapat diberi style melalui `style.css`.
-
-### Bagian body
-
-Semua elemen yang terlihat oleh pengguna berada di dalam tag `<body>`. Di dalam body terdapat `header`, `main`, `footer`, dan pemanggilan file JavaScript.
+`logombg.png` dipakai sebagai favicon agar logo muncul di tab browser.
 
 ### Header dan Navbar
 
-Bagian header dibuat dengan tag:
+Header memakai tag:
 
 ```html
 <header>
@@ -94,356 +84,168 @@ Bagian header dibuat dengan tag:
 </header>
 ```
 
-Header berfungsi sebagai bagian navigasi utama di bagian atas website. Di dalamnya ada tag `<nav>` sebagai penanda area navigasi, lalu `<ul>` dan `<li>` untuk membuat daftar menu.
-
-Setiap menu menggunakan tag `<a>` seperti:
+Di bagian paling kiri navbar ada logo kecil:
 
 ```html
-<a href="#home">Home</a>
+<a href="#home" class="header-logo">
+    <img src="assets/logombg.png" alt="Logo MBG">
+</a>
 ```
 
-Tanda `#home` berarti ketika link diklik, halaman akan berpindah ke elemen yang memiliki `id="home"`. Cara ini disebut anchor link dan cocok untuk website satu halaman.
-
-Menu navbar mengarah ke beberapa section, yaitu:
-
-- `#home`
-- `#tentang`
-- `#sasaran`
-- `#alur`
-- `#sppg`
-- `#manfaat`
-- `#dokumentasi`
-- `#gizi`
-- `#faq`
-
-### Main
-
-Tag `<main>` digunakan untuk membungkus isi utama website. Di dalam main terdapat beberapa section yang menjadi bagian utama halaman.
+Setelah logo, ada menu navigasi seperti Home, Tentang, Sasaran, Alur, SPPG, Manfaat, Dokumentasi, Gizi, dan FAQ.
 
 ### Section Home
 
-Section home ditulis seperti ini:
+Section Home adalah bagian pembuka website.
+Bagian ini memakai background gambar:
 
-```html
-<section id="home" class="container home">
+```css
+background-image: linear-gradient(...), url("assets/prabowo.webp");
 ```
 
-`id="home"` digunakan agar navbar bisa menuju ke bagian ini. Class `home` digunakan untuk memberi style khusus pada section pembuka, sedangkan class `container` membatasi isi agar tetap rapi di tengah.
+Overlay gelap tetap dipakai supaya teks putih mudah dibaca.
 
-Di dalam home terdapat beberapa bagian:
-
-- `.logohome`
-
-  Bagian ini berisi logo dan teks singkat "My Bini Gweh (MBG)". Logo menggunakan tag `<img>` dengan class `logombg`.
-
-- `.headline`
-
-  Bagian ini berisi judul utama website:
-
-  ```html
-  <h1>Gizi Hari Ini,<br>Generasi Kuat Esok Hari</h1>
-  ```
-
-  Tag `<br>` digunakan untuk memindahkan teks ke baris baru.
-
-- Paragraf penjelasan
-
-  Paragraf ini menjelaskan bahwa MBG Insight menyajikan informasi Program Makan Bergizi Gratis secara ringkas dan mudah dipahami.
-
-- `.button`
-
-  Bagian ini berisi dua tombol link:
-
-  - `Jelajahi Program`
-  - `Lihat Alur MBG`
-
-  Keduanya sebenarnya adalah tag `<a>`, tetapi diberi class `button1` dan `button2` agar tampil seperti tombol.
-
-- `.disclaimer`
-
-  Bagian ini berisi keterangan bahwa website bukan kanal resmi pemerintah. Class `disclaimer` dipakai untuk mengatur posisi dan tampilannya di bagian bawah hero.
-
-### Pola Section dan Container
-
-Setelah home, section lain memakai pola:
+Di hero juga ada logo kecil:
 
 ```html
-<section id="nama-section" class="nama-section">
-    <div class="container">
-        isi section
-    </div>
-</section>
+<img src="assets/logombg.png" alt="Logo MBG Insight" class="logombg">
 ```
-
-Pola ini penting karena section luar dipakai untuk background yang full sampai kanan dan kiri layar, sedangkan `<div class="container">` dipakai untuk menjaga isi tetap rapi di tengah.
-
-Contohnya:
-
-```html
-<section id="manfaat" class="manfaat">
-    <div class="container">
-        ...
-    </div>
-</section>
-```
-
-Dengan cara ini, background dari `.manfaat` bisa melebar penuh, tetapi teks dan card tetap mengikuti lebar container.
 
 ### Section Tentang
 
-Section tentang menggunakan:
-
-```html
-<section id="tentang" class="tentang">
-```
-
-Bagian ini menjelaskan pengertian Program Makan Bergizi Gratis. Di dalamnya ada class `tentang-content` untuk membungkus judul dan paragraf utama.
-
-Setelah paragraf, terdapat daftar menggunakan `<ul>` dan `<li>`. Daftar ini menjelaskan tiga poin:
-
-- Pemenuhan Gizi
-- Dukungan Pendidikan
-- Investasi SDM
-
-Setiap item memakai tag `<b>` untuk menebalkan judul kecil, lalu paragraf untuk penjelasannya.
+Section Tentang menjelaskan apa itu Program MBG.
+Strukturnya sederhana: judul, paragraf, dan list poin dalam card kecil.
 
 ### Section Sasaran
 
-Section sasaran menggunakan:
-
-```html
-<section id="sasaran" class="sasaran">
-```
-
-Bagian ini menjelaskan siapa saja penerima manfaat program MBG. Data ditampilkan menggunakan tabel.
-
-Tag yang dipakai adalah:
-
-- `<table>` untuk membungkus tabel
-- `<tr>` untuk baris tabel
-- `<td>` untuk isi kolom
-
-Kolom pertama berisi kelompok sasaran, sedangkan kolom kedua berisi penjelasan. Contohnya peserta didik, santri, anak usia dini dan balita, ibu hamil, serta ibu menyusui.
+Section Sasaran menggunakan tabel HTML.
+Tabel ini menjelaskan kelompok penerima manfaat seperti peserta didik, santri, anak usia dini, ibu hamil, dan ibu menyusui.
 
 ### Section Alur
 
-Section alur menggunakan:
+Section Alur menggunakan flexbox card.
+Setiap card berisi:
+
+- gambar
+- judul alur
+- paragraf pendek
+
+Contoh gambar di card:
 
 ```html
-<section id="alur" class="alur">
+<img src="assets/mbg.webp" alt="Foto MBG">
 ```
 
-Bagian ini menjelaskan tahapan program MBG berjalan. Isi section ditampilkan dalam beberapa card.
-
-Pembungkus card menggunakan class:
+Card alur tetap menggunakan struktur sederhana:
 
 ```html
 <div class="card-alur">
+    <div class="card">
+        <img src="assets/mbg.webp" alt="Foto MBG">
+        <h3>01. Identifikasi Sasaran</h3>
+        <p>...</p>
+    </div>
+</div>
 ```
-
-Setiap card memakai class `card`. Di dalam card terdapat:
-
-- `<h3>` untuk judul tahap
-- `<p>` untuk penjelasan tahap
-
-Tahap yang dijelaskan mulai dari identifikasi sasaran, perencanaan menu, pengadaan bahan pangan, pengolahan di SPPG, distribusi, sampai edukasi dan pemantauan.
 
 ### Section SPPG
 
-Section SPPG menggunakan:
+Section SPPG menjelaskan Satuan Pelayanan Pemenuhan Gizi.
+Card SPPG juga diberi gambar agar tampilan tidak terlalu kosong.
 
-```html
-<section id="sppg" class="sppg">
-```
-
-Bagian ini menjelaskan SPPG sebagai titik layanan pemenuhan gizi. SPPG dijelaskan sebagai tempat yang membantu menyiapkan dan menyalurkan makanan bergizi.
-
-Card pada section ini dibungkus oleh:
+Card SPPG tetap memakai flexbox sederhana:
 
 ```html
 <div class="card-sppg">
+    <div class="card">
+        <img src="assets/dapur2.webp" alt="Foto layanan MBG">
+        <h3>Bahan Pangan</h3>
+        <p>...</p>
+    </div>
+</div>
 ```
-
-Isi card terdiri dari:
-
-- Bahan Pangan
-- Pengolahan
-- Distribusi
-- Pengawasan
-
-Class `card-sppg` digunakan agar ukuran dan susunan card SPPG bisa diatur khusus di CSS.
 
 ### Section Manfaat
 
-Section manfaat menggunakan:
+Section Manfaat berisi beberapa card seperti Kesehatan Anak, Konsentrasi Belajar, Dukungan Keluarga, dan lainnya.
 
-```html
-<section id="manfaat" class="manfaat">
-```
-
-Bagian ini menjelaskan bahwa MBG tidak hanya tentang makan gratis, tetapi juga berkaitan dengan kesehatan, pendidikan, keluarga, dan ekonomi lokal.
-
-Daftar manfaat ditampilkan dalam card yang dibungkus class:
-
-```html
-<div class="card-manfaat">
-```
-
-Isi card manfaat antara lain:
-
-- Kesehatan Anak
-- Konsentrasi Belajar
-- Dukungan Keluarga
-- Pencegahan Masalah Gizi
-- Ekonomi Lokal
-- Investasi SDM
+Setiap card manfaat juga diberi gambar.
+Gambar tidak harus selalu akurat dengan deskripsi, yang penting berasal dari folder `assets` dan masih berhubungan dengan MBG.
 
 ### Section Dokumentasi
 
-Section dokumentasi menggunakan:
+Section Dokumentasi sekarang dibuat seperti galeri.
+Tidak ada paragraf deskripsi section dan tidak ada teks di dalam card.
+
+Strukturnya:
 
 ```html
 <section id="dokumentasi" class="dokumentasi">
+    <div class="container">
+        <h2>Dokumentasi Pelaksanaan MBG</h2>
+
+        <div class="card-dokumentasi">
+            <div class="card">
+                <img src="assets/dapur.webp" alt="Dokumentasi MBG" width="250">
+            </div>
+        </div>
+    </div>
+</section>
 ```
 
-Bagian ini menampilkan dokumentasi visual. Setiap card berisi gambar, judul, dan paragraf.
+Foto yang sudah dimasukkan ke dokumentasi:
 
-Gambar ditampilkan dengan tag:
-
-```html
-<img src="assets/prabowo1.jpg" alt="..." width="250">
-```
-
-Class pembungkusnya adalah:
-
-```html
-<div class="card-dokumentasi">
-```
-
-Class ini dipakai untuk mengatur susunan card dokumentasi dan ukuran gambar di CSS.
+- `dapur.webp`
+- `dapur1.webp`
+- `dapur2.webp`
+- `distribusi.webp`
+- `mbg.webp`
+- `mobilmbg.webp`
+- `mobilmbg1.webp`
+- `prabowo.webp`
+- `prabowo1.jpg`
+- `prabowo2.webp`
+- `sppg.webp`
 
 ### Section Gizi
 
-Section gizi menggunakan:
+Section Gizi berisi edukasi sederhana tentang komponen makanan bergizi.
+Card gizi menjelaskan karbohidrat, protein, sayur, buah, dan air mineral.
 
-```html
-<section id="gizi" class="gizi">
-```
+### Section Standar Gizi
 
-Bagian ini berisi edukasi sederhana tentang komponen makanan bergizi. Kontennya dibuat dalam bentuk card dengan class pembungkus:
-
-```html
-<div class="card-gizi">
-```
-
-Card yang ditampilkan membahas:
-
-- Karbohidrat
-- Protein
-- Sayur
-- Buah
-- Air Mineral
-
-Section ini membantu pengguna memahami bahwa makanan bergizi tidak hanya soal kenyang, tetapi juga tentang keseimbangan nutrisi.
+Section Standar Gizi memakai tabel HTML.
+Isinya menjelaskan standar sekali makan dan contoh porsi makanan.
 
 ### Section Tata Kelola
 
-Section tata kelola menggunakan:
-
-```html
-<section id="tata-kelola" class="tata-kelola">
-```
-
-Bagian ini menjelaskan bahwa program berskala nasional membutuhkan tata kelola yang aman, terukur, dan bertanggung jawab.
-
-Card pada bagian ini dibungkus oleh:
-
-```html
-<div class="card-tata-kelola">
-```
-
-Isi card terdiri dari:
-
-- Keamanan Pangan
-- Ketepatan Sasaran
-- Evaluasi
+Section Tata Kelola menjelaskan keamanan pangan, kualitas bahan, ketepatan sasaran, ketepatan waktu, transparansi informasi, dan evaluasi.
 
 ### Section FAQ
 
-Section FAQ menggunakan:
-
-```html
-<section id="faq" class="faq">
-```
-
-FAQ berisi pertanyaan umum seputar website dan Program MBG. Card FAQ dibungkus dengan class:
-
-```html
-<div class="card-faq">
-```
-
-Setiap pertanyaan menggunakan tag `<h3>` dan diberi atribut `onclick`, contohnya:
-
-```html
-<h3 onclick="bukaFaq('faq1')">Apa itu MBG?</h3>
-```
-
-Atribut `onclick` berarti ketika pertanyaan diklik, function JavaScript bernama `bukaFaq()` akan dijalankan. Jawaban FAQ berada pada tag `<p>` yang memiliki id, misalnya:
-
-```html
-<p id="faq1" class="jawaban-faq">...</p>
-```
-
-Class `jawaban-faq` digunakan untuk menyembunyikan jawaban di awal. Nanti JavaScript akan mengubah tampilannya menjadi muncul atau hilang.
+Section FAQ berisi pertanyaan dan jawaban.
+Jawaban FAQ dibuka memakai function `bukaFaq()` dari `script.js`.
 
 ### Footer
 
-Footer ditulis dengan tag:
+Footer berisi:
 
-```html
-<footer class="footer">
-```
+- judul MBG Insight
+- deskripsi singkat
+- link navigasi
+- link GitHub
+- tombol Info Website
+- copyright
 
-Footer berisi judul website, deskripsi singkat, menu link, tombol JavaScript, dan copyright.
+Tombol kembali ke atas tetap berada di HTML footer, tetapi tampil fixed di kanan bawah.
 
-Menu footer dibuat menggunakan `<ul>` dan `<li>`, mirip seperti navbar. Link footer juga menggunakan anchor link seperti `#home`, `#tentang`, dan `#faq`.
+## 5. Penjelasan style.css
 
-Di footer juga ada dua tombol:
-
-```html
-<button onclick="tampilPesan()" class="tombol-js">Info Website</button>
-<button onclick="kembaliKeAtas()" class="tombol-js">Kembali ke Atas</button>
-```
-
-Tombol pertama menjalankan function `tampilPesan()`, sedangkan tombol kedua menjalankan function `kembaliKeAtas()`.
-
-### Pemanggilan script.js
-
-Di bagian bawah sebelum `</body>`, terdapat:
-
-```html
-<script src="script.js"></script>
-```
-
-Kode ini menghubungkan HTML dengan file JavaScript. Letaknya di bawah agar struktur HTML dibaca dulu oleh browser sebelum JavaScript dijalankan.
-
-## 4. Penjelasan style.css
-
-File `style.css` digunakan untuk mengatur tampilan semua bagian website. CSS ini masih menggunakan gaya basic, seperti `padding`, `margin`, `display: flex`, `gap`, `width`, `background-color`, `border`, `border-radius`, `color`, dan `font-size`.
-
-### Import Font
-
-Pada bagian atas terdapat:
-
-```css
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
-```
-
-Kode ini mengambil font Inter dari Google Fonts. Font ini kemudian digunakan untuk seluruh website.
+File `style.css` mengatur tampilan semua bagian website.
 
 ### Reset CSS
 
-Bagian ini:
+Bagian awal CSS merapikan margin, padding, box sizing, dan font.
 
 ```css
 *,html {
@@ -454,197 +256,52 @@ Bagian ini:
 }
 ```
 
-digunakan untuk menghapus margin dan padding bawaan browser. Dengan begitu, tampilan halaman lebih mudah diatur dari awal.
-
-`box-sizing: border-box` membuat ukuran elemen lebih mudah dihitung, karena padding dan border ikut dihitung dalam ukuran elemen.
-
-### Body
-
-```css
-body {
-    background-color: #f7f8f5;
-    color: #1b1b1b;
-}
-```
-
-Body diberi warna background abu-hijau sangat muda. Warna teks dasar menggunakan hitam keabu-abuan agar mudah dibaca.
-
 ### Header
 
-Header dibuat fixed:
+Header dibuat fixed agar tetap berada di atas layar.
 
 ```css
-position: fixed;
-top: 0;
-left: 0;
-z-index: 999;
-```
-
-Artinya header akan tetap berada di bagian atas layar saat halaman discroll. `z-index` digunakan agar header tetap berada di atas elemen lain.
-
-Header juga menggunakan:
-
-```css
-display: flex;
-justify-content: center;
-align-items: center;
-```
-
-`display: flex` membuat isi header lebih mudah disusun. `justify-content: center` membuat isi berada di tengah secara horizontal, sedangkan `align-items: center` membuat isi berada di tengah secara vertikal.
-
-### Navigasi
-
-Menu navigasi menggunakan:
-
-```css
-header ul {
-    list-style: none;
-    display: flex;
-    gap: 40px;
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
 }
 ```
 
-`list-style: none` menghapus titik bawaan dari list. `display: flex` membuat menu sejajar ke samping. `gap` memberi jarak antar menu.
-
-Link navbar diberi warna gelap dan hover hijau:
+Logo header memakai class:
 
 ```css
-header a:hover {
-    color: #2f6b3f;
+.header-logo img {
+    width: 20px;
+    object-fit: contain;
 }
 ```
 
-Hover berarti style berubah saat kursor diarahkan ke elemen.
+### Card Gambar
 
-### Heading
-
-```css
-h2 {
-    font-size: 40px;
-    letter-spacing: -1.8px;
-    padding-bottom: 25px;
-}
-```
-
-Tag `h2` dibuat besar agar judul section terlihat jelas. `padding-bottom` memberi jarak bawah antara judul dan isi section.
-
-### Container
+Gambar pada card alur, SPPG, dan manfaat diatur bersama.
 
 ```css
-.container {
-    width: min(100% - 64px, 1400px);
-    margin: 0 auto;
-}
-```
-
-Class `.container` digunakan untuk membatasi lebar konten. `margin: 0 auto` membuat konten berada di tengah. Dengan pola section luar dan container di dalamnya, background section bisa full layar, tetapi isi tetap rapi di tengah.
-
-### Home atau Hero
-
-Section `.home` menjadi bagian pembuka website. CSS-nya menggunakan gambar sebagai background:
-
-```css
-background-image: linear-gradient(...), url("assets/prabowo1.jpg");
-```
-
-Gambar diberi lapisan gelap menggunakan `linear-gradient` agar teks putih di atasnya tetap terbaca.
-
-Property:
-
-```css
-min-height: 100svh;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-```
-
-membuat section home memenuhi tinggi layar dan isinya berada di tengah. `flex-direction: column` membuat isi tersusun dari atas ke bawah.
-
-### Logo Home
-
-Class `.logohome` menggunakan flex agar logo dan teks berada dalam satu baris. Class `.logombg` mengatur ukuran logo menjadi kecil dan memberi jarak kanan dengan `margin-right`.
-
-### Headline
-
-Class `.headline` mengatur judul utama agar terlihat besar dan berada di tengah. `line-height` digunakan untuk mengatur jarak antar baris judul.
-
-### Button
-
-Tombol dibuat dari tag `<a>`, lalu diberi class `button1` dan `button2`.
-
-```css
-.button1 {
-    background-color: #2f6b3f;
-    color: #ffffff;
-}
-```
-
-Tombol pertama diberi warna hijau gelap sebagai aksen utama. Tombol kedua dibuat transparan dengan border putih agar cocok dengan background hero yang gelap.
-
-Hover pada tombol membuat warna berubah sedikit saat diarahkan kursor.
-
-### Disclaimer
-
-Class `.disclaimer` diposisikan di bagian bawah hero:
-
-```css
-position: absolute;
-bottom: 40px;
-```
-
-Ini membuat disclaimer berada di bawah section home, bukan mengikuti alur normal seperti paragraf biasa.
-
-### Section Tentang
-
-Section `.tentang` diberi padding dan background putih. Padding digunakan agar isi section tidak terlalu menempel dengan bagian atas dan bawah.
-
-List di dalam section tentang dibuat seperti card kecil:
-
-```css
-.tentang li {
-    background-color: #f7faf4;
-    border: 1px solid #d7dfd0;
-    border-radius: 10px;
-    padding: 18px;
-}
-```
-
-`border-radius` membuat sudut menjadi sedikit melengkung. Hover pada list membuat warna berubah lembut saat diarahkan kursor.
-
-### Section Sasaran
-
-Section `.sasaran` berisi tabel. Background section dibuat sedikit berbeda agar ada pembeda visual dengan section lain.
-
-Tabel dibuat penuh mengikuti lebar container:
-
-```css
-.sasaran table {
+.card-alur img,
+.card-sppg img,
+.card-manfaat img {
     width: 100%;
-    border-collapse: collapse;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 ```
 
-`border-collapse: collapse` membuat border tabel menyatu dan terlihat lebih rapi.
+CSS ini membuat semua gambar card punya ukuran yang sama.
 
-Kolom pertama pada tabel diberi style khusus:
+### Dokumentasi
 
-```css
-.sasaran td:first-child {
-    width: 250px;
-    font-weight: 700;
-    background-color: #eef6e9;
-}
-```
-
-Ini membuat nama kelompok sasaran lebih menonjol dibanding penjelasannya.
-
-### Section Alur dan Card
-
-Section alur memakai card untuk menampilkan tahapan program. Pembungkus card menggunakan:
+Dokumentasi memakai flexbox sederhana.
 
 ```css
-.card-alur {
+.card-dokumentasi {
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -652,191 +309,49 @@ Section alur memakai card untuk menampilkan tahapan program. Pembungkus card men
 }
 ```
 
-`display: flex` membuat card bisa disusun sejajar. `gap` memberi jarak antar card. `flex-wrap: wrap` membuat card turun ke baris berikutnya jika ruang tidak cukup.
-
-Class `.card` adalah class global yang dipakai di banyak section. Isinya:
-
-```css
-.card {
-    background-color: #ffffff;
-    width: 280px;
-    min-height: 170px;
-    padding: 20px;
-    border: 1px solid #d8d8d8;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-}
-```
-
-Card diberi background putih, border abu-abu muda, sudut melengkung, dan bayangan tipis. Hover pada card membuat card terlihat sedikit berubah saat diarahkan kursor.
-
-### Section SPPG
-
-Section `.sppg` menggunakan background abu-hijau muda. Paragraf section diberi ukuran dan line-height agar nyaman dibaca.
-
-Card SPPG menggunakan `.card-sppg`. Di CSS, ukuran card SPPG dibuat sedikit berbeda:
-
-```css
-.card-sppg .card {
-    width: 300px;
-    min-height: 160px;
-}
-```
-
-Ini membuat card SPPG lebih sesuai dengan jumlah dan isi teksnya.
-
-### Section Manfaat
-
-Section `.manfaat` memakai background putih. Card manfaat menggunakan `.card-manfaat`. Ukuran card manfaat dibuat lebih lebar:
-
-```css
-.card-manfaat .card {
-    width: 380px;
-    min-height: 150px;
-}
-```
-
-Karena isi manfaat cukup ringkas, card dibuat lebar agar susunannya terlihat lebih rapi.
-
-### Section Dokumentasi
-
-Section `.dokumentasi` berisi card dengan gambar. Class `.card-dokumentasi` mengatur susunan card dokumentasi.
-
-Gambar dokumentasi diatur dengan:
+Gambar dokumentasi:
 
 ```css
 .card-dokumentasi img {
     width: 100%;
     height: 170px;
     object-fit: cover;
+    border-radius: 8px;
 }
 ```
 
-`width: 100%` membuat gambar mengikuti lebar card. `height: 170px` membuat semua gambar sama tinggi. `object-fit: cover` membuat gambar tetap memenuhi area tanpa merusak ukuran card.
+Karena card dokumentasi hanya berisi gambar, tinggi card dibuat lebih pendek.
 
-### Section Gizi
+### Tombol Kembali ke Atas
 
-Section `.gizi` menjelaskan komponen gizi dalam bentuk card. Card pada section ini memakai `.card-gizi`.
+Tombol kembali ke atas memakai class `tombol-atas`.
+Tombol ini fixed di kanan bawah dan berbentuk lingkaran.
 
 ```css
-.card-gizi .card {
-    width: 240px;
-    min-height: 230px;
+.tombol-atas {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
 }
 ```
 
-Ukuran card dibuat cukup tinggi karena beberapa penjelasan gizi memiliki teks yang lebih panjang.
+Isi tombol hanya panah atas:
 
-### Section Tata Kelola
-
-Section `.tata-kelola` membahas keamanan pangan, ketepatan sasaran, dan evaluasi. Card dibungkus oleh `.card-tata-kelola`.
-
-```css
-.card-tata-kelola .card {
-    width: 360px;
-    min-height: 150px;
-}
+```html
+&#8593;
 ```
 
-Ukuran ini membuat tiga card dapat tampil rapi di tengah.
+## 6. Penjelasan script.js
 
-### Section FAQ
+File `script.js` tidak ditambah fitur baru.
+Isinya tetap sederhana.
 
-Section `.faq` dibuat rata tengah:
+### tampilPesan()
 
-```css
-.faq {
-    text-align: center;
-}
-```
-
-Card FAQ disusun vertikal:
-
-```css
-.card-faq {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-```
-
-`flex-direction: column` membuat card FAQ tersusun dari atas ke bawah. `align-items: center` membuat card berada di tengah.
-
-Jawaban FAQ disembunyikan di awal:
-
-```css
-.jawaban-faq {
-    display: none;
-    margin-top: 12px;
-}
-```
-
-Nanti JavaScript akan mengubah `display` menjadi `block` ketika pertanyaan diklik.
-
-### Footer
-
-Footer menggunakan background gelap:
-
-```css
-.footer {
-    background-color: #142017;
-    color: #ffffff;
-}
-```
-
-Warna gelap membuat footer terlihat sebagai penutup halaman. Teks footer dibuat putih agar kontras.
-
-Menu footer menggunakan flex:
-
-```css
-.footer-menu {
-    display: flex;
-    gap: 18px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-```
-
-Menu disusun sejajar dan berada di tengah. Tombol footer menggunakan class `.tombol-js`, dengan border warna kuning hangat dan hover sederhana.
-
-### Background Section
-
-Di bagian bawah CSS ada pengaturan background untuk beberapa section:
-
-```css
-.tentang,
-.alur,
-.manfaat,
-.gizi,
-.faq {
-    background-color: #ffffff;
-}
-
-.sasaran,
-.sppg,
-.dokumentasi,
-.tata-kelola {
-    background-color: #f7faf6;
-}
-```
-
-Bagian ini membuat warna background antar section bergantian antara putih dan abu-hijau muda. Tujuannya agar halaman tidak terlalu polos, tetapi tetap sederhana.
-
-## 5. Penjelasan script.js
-
-File `script.js` berisi JavaScript yang masih sederhana. JavaScript di sini digunakan sebagai latihan interaksi dasar pada website.
-
-### console.log
-
-```js
-console.log("js on");
-```
-
-Kode ini menampilkan teks `js on` di console browser. Fungsinya untuk mengecek apakah file JavaScript sudah berhasil tersambung dengan HTML.
-
-### Function tampilPesan
+Function ini menampilkan alert ketika tombol Info Website diklik.
 
 ```js
 function tampilPesan() {
@@ -844,15 +359,9 @@ function tampilPesan() {
 }
 ```
 
-Function ini akan menampilkan kotak pesan atau alert. Function ini dipanggil oleh tombol `Info Website` di footer.
+### kembaliKeAtas()
 
-Saat tombol diklik, browser akan menampilkan pesan:
-
-```text
-web design B - MBG
-```
-
-### Function kembaliKeAtas
+Function ini membuat halaman kembali ke posisi paling atas.
 
 ```js
 function kembaliKeAtas() {
@@ -860,59 +369,28 @@ function kembaliKeAtas() {
 }
 ```
 
-Function ini digunakan untuk mengembalikan posisi halaman ke bagian paling atas. Tombol `Kembali ke Atas` di footer memanggil function ini.
+Tombolnya sekarang fixed di kanan bawah, tetapi function JavaScript-nya tetap sama.
 
-`window.scrollTo(0, 0)` berarti halaman diarahkan ke posisi horizontal 0 dan vertikal 0, yaitu bagian paling atas halaman.
+### bukaFaq()
 
-### Function bukaFaq
+Function ini dipakai untuk membuka atau menutup jawaban FAQ.
 
-```js
-function bukaFaq(idJawaban) {
-    var jawaban = document.getElementById(idJawaban);
+## 7. Catatan Desain
 
-    if (jawaban.style.display === "block") {
-        jawaban.style.display = "none";
-    } else {
-        jawaban.style.display = "block";
-    }
-}
-```
+Desain website tetap basic:
 
-Function ini digunakan untuk membuka dan menutup jawaban FAQ.
+- HTML biasa
+- CSS biasa
+- JavaScript native
+- flexbox sederhana
+- tanpa framework
+- tanpa animasi rumit
+- tanpa layout professional yang terlalu kompleks
 
-Penjelasannya:
+Gambar dimasukkan ke dalam card agar website tidak terlalu flat.
+Section dokumentasi menjadi tempat utama kumpulan foto.
 
-- `idJawaban` adalah nama id dari jawaban FAQ yang dikirim dari HTML.
-- `document.getElementById(idJawaban)` digunakan untuk mengambil elemen jawaban berdasarkan id.
-- Jika jawaban sedang tampil (`display === "block"`), maka jawaban disembunyikan dengan `display = "none"`.
-- Jika jawaban sedang tersembunyi, maka jawaban ditampilkan dengan `display = "block"`.
+## 8. Kesimpulan
 
-Contohnya pada HTML:
-
-```html
-<h3 onclick="bukaFaq('faq1')">Apa itu MBG?</h3>
-```
-
-Saat pertanyaan diklik, JavaScript akan mencari elemen dengan id `faq1`, lalu menampilkan atau menyembunyikan jawabannya.
-
-## 6. Alur Kerja Website
-
-Saat pengguna membuka website, bagian pertama yang terlihat adalah hero atau section home. Di bagian atas terdapat navbar yang tetap menempel karena header menggunakan `position: fixed`.
-
-Pengguna dapat mengklik menu navbar untuk berpindah ke section tertentu. Misalnya, klik menu `Tentang` akan membawa pengguna ke section `#tentang`, sedangkan klik menu `FAQ` akan membawa pengguna ke section `#faq`.
-
-Setelah membaca bagian home, pengguna dapat melihat penjelasan tentang Program MBG, lalu melihat sasaran penerima manfaat dalam bentuk tabel. Setelah itu pengguna dapat membaca alur program dalam bentuk card, memahami peran SPPG, melihat manfaat program, membaca dokumentasi, mempelajari komponen gizi, dan membaca bagian tata kelola.
-
-Pada bagian FAQ, pengguna dapat mengklik pertanyaan untuk membuka jawaban. Jika pertanyaan diklik lagi, jawaban akan disembunyikan kembali. Ini menjadi contoh interaksi sederhana menggunakan JavaScript.
-
-Di bagian paling bawah ada footer. Footer berisi nama website, menu navigasi tambahan, tombol `Info Website`, tombol `Kembali ke Atas`, dan copyright. Tombol `Info Website` menampilkan alert, sedangkan tombol `Kembali ke Atas` membawa halaman kembali ke section home.
-
-## 7. Kesimpulan
-
-Project MBG Insight ini menggunakan struktur HTML yang sederhana dan mudah dipahami. Setiap bagian website dipisahkan ke dalam section, sehingga isi halaman lebih rapi dan mudah dicari.
-
-File `style.css` digunakan untuk mengatur tampilan dengan CSS basic. Styling yang digunakan masih sederhana, seperti pengaturan warna, padding, margin, flex, gap, border, card, hover, dan footer. Walaupun sederhana, tampilan website tetap dibuat rapi dengan pembagian background section dan card yang konsisten.
-
-File `script.js` digunakan sebagai pelengkap interaksi dasar. JavaScript yang dipakai masih mudah dipahami, yaitu `console.log`, `alert`, function sederhana, `onclick`, dan pengaturan `display` untuk FAQ.
-
-Secara keseluruhan, website ini cocok sebagai project tugas kuliah dasar HTML, CSS, dan JavaScript karena sudah memiliki struktur halaman lengkap, tampilan yang cukup rapi, dan interaksi sederhana tanpa menggunakan framework atau library tambahan.
+MBG Insight adalah website edukatif sederhana yang dibuat dengan HTML, CSS, dan JavaScript native.
+Website ini sudah memakai logo di header dan tab browser, gambar pada card, galeri dokumentasi, serta tombol kembali ke atas fixed di kanan bawah.

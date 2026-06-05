@@ -682,6 +682,22 @@ h2{
     color: #142017;
 }
 
+.tombol-atas {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    background-color: #173b22;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 1;
+    z-index: 1000;
+}
+
 .footer-copy {
     text-align: center;
     margin-top: 30px;
