@@ -1,7 +1,5 @@
-console.log("js on");
-
 function tampilPesan() {
-    alert("web design B - MBG");
+    alert("KELOMPOK 9 - FADHOL, SURYA, NAJMI, INDRA, NASHIR");
 }
 
 function kembaliKeAtas() {
